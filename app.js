@@ -18,8 +18,8 @@ var hunting = prompt('Does Conor like to hunt?');
 hunting.toLowerCase();
 console.log('Conor does like to hunt. Birds are his favorite game animal. You guessed: ' + hunting);
 
-document.write(firstNameQ);
-document.write(bourbonQ);
-document.write(conorCity);
-document.write(drivingAbility);
-document.write(hunting);
+document.write('1.' + firstNameQ + '<br>');
+document.write('2. ' + bourbonQ + '<br>');
+document.write('3. ' + conorCity + '<br>');
+document.write('4. ' + drivingAbility + '<br>');
+document.write('5. ' + hunting );
