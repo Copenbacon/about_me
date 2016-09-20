@@ -1,19 +1,37 @@
+html body {
+  background-color: #efefef;
+  margin: auto;
+  padding: inherit;
+}
+
 header {
   width: 100%;
   text-align: center;
+  background-color: black;
+  margin:0px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: white;
+  position: fixed;
 }
 
 *{
-  font-family:sans-serif;
+  font-family:Helvetica, sans-serif;
 }
 
 figure.ccPic {
   text-align:center;
   width: 453px;
   margin: auto;
+  padding-top: 10%;
 }
 
 figcaption{
   text-align: center;
   font-size: small;
+}
+
+p {
+  text-align: center;
+  margin: 1.15% 15% 2% 15%;
 }
