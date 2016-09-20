@@ -1,6 +1,7 @@
 "use strict";
 var username = prompt('Please enter your name');
 alert('Welcome, ' + username + '!');
+console.log('Your userame is ' + username);
 var firstNameQ = prompt('Is \"Conor\" Conor\' s first name?');
 firstNameQ.toLowerCase();
 console.log('Conor\'s first name is Spencer, you answered: ' + firstNameQ);
@@ -15,7 +16,7 @@ drivingAbility.toLowerCase();
 console.log('Conor DOES know how to drive, despite what his family and girlfriend may have told you. You guessed: ' + drivingAbility);
 var hunting = prompt('Does Conor like to hunt?');
 hunting.toLowerCase();
-console.log('Conor does like to hunt. Birds are his favorite game. You guessed: ' + hunting);
+console.log('Conor does like to hunt. Birds are his favorite game animal. You guessed: ' + hunting);
 
 document.write(firstNameQ);
 document.write(bourbonQ);
