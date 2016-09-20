@@ -1,0 +1,14 @@
+var username = prompt('WHAT is your name?');
+alert('Welcome, ' + username + '!');
+console.log('The user\'s name is ' + username);
+var quest = prompt('WHAT is your quest?');
+alert('Welcome, ' + username + ' Your quest is ' + quest + '!');
+console.log('The user\'s quest is ' + quest);
+var favorite_color = prompt('WHAT is your favorite color?');
+alert('Welcome, ' + username + ' Your quest is ' + quest + ' Your favorite color is ' + favorite_color + '!');
+console.log('The user\'s favorite color is ' + favorite_color);
+var swallow = prompt('WHAT is the air speed velocity of an unladen swallow?');
+alert( 'Welcome, ' + username + ' Your quest is ' + quest + ' Your favorite color is ' + favorite_color + ' the air speed velocity of  an unladen swallow is' + swallow +' GAAAAHHHHH!');
+alert('Special thanks to Monty Python and the Holy Grail for the questions');
+console.log('The air speed velocity of an unladen swallow is ' + swallow);
+console.log('Special thanks to Monty Python and the Holy Grail for the questions');
