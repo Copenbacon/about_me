@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 var username = prompt('Please enter your name');
 alert('Welcome, ' + username + '!');
-console.log('Your userame is ' + username);
+console.log('Your username is ' + username);
 var firstNameQ = prompt('Is \"Conor\" Conor\' s first name?');
 firstNameQ.toLowerCase();
 console.log('Conor\'s first name is Spencer, you answered: ' + firstNameQ);
