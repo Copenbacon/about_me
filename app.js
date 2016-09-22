@@ -87,10 +87,7 @@ console.log('Conor does like to hunt. Birds are his favorite game animal. You gu
 
 //Guess a number question
 
-var randomNum = Math.random().toString();
-var res = randomNum.charAt(2);
-randomNum = res;
-randomNum = parseInt(randomNum);
+var randomNum = Math.floor(Math.random() * 10) + 1;
 console.log(randomNum);
 
 for (var guessNum = 1; guessNum < 5; guessNum++){
@@ -106,7 +103,7 @@ for (var guessNum = 1; guessNum < 5; guessNum++){
   } else {
     alert('Incorrect!');
     if(guessNum >= 4){
-      alert('you\'ve exceeded');
+      alert('You\'ve exceeded the allowable number of guesses! The correct number was: ' + randomNum);
     }
   }
 }
@@ -116,12 +113,12 @@ var animalsConorOwned = ['ducks', 'dogs', 'geese', 'cats'];
 var numberOfGuesses = 0;
 var guessing = true;
 
-while(guessing === true && numberOfGuesses < 6){
+while(guessing && numberOfGuesses < 6){
   console.log('while');
   var guessAboutAnimalsOwned = prompt('Can you guess a type of animal Conor has owned?');
-  for(var x = 0; x < 4; x++){
+  for(var x = 0; x < animalsConorOwned.length; x++){
     if (guessAboutAnimalsOwned === animalsConorOwned[x]){
-      alert('Correct! Conor has owned ' + animalsConorOwned[x] + '. He has owned ducks, dogs, geese, and cats.');
+      alert('Correct! Conor has owned ' + animalsConorOwned[x] + '. He has owned ' + animalsConorOwned.toString() + '.');
       guessing = false;
       correctGuesses++;
       numberOfGuesses++;
@@ -144,19 +141,3 @@ if (correctGuesses === 7){
 } else {
   alert('You got ' + correctGuesses + ' out of 7, ' + username + ', better luck next time!');
 }
-
-
-// document.write('<p>Is \"Conor\" Conor\'s first name?</p>');
-// document.write('<p>You answered: ' + '</p>');
-// document.write();
-// document.write();
-// document.write();
-// document.write();
-// document.write();
-// document.write();
-// document.write();
-// document.write();
-// document.write();
-// document.write();
-// document.write();
-// document.write();
