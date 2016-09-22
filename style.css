@@ -35,3 +35,19 @@ p {
   text-align: center;
   margin: 1.15% 15% 2% 15%;
 }
+
+article {
+  text-align: left;
+  margin-left: 10%;
+  margin-right: 30%;
+}
+
+li {
+  margin: 2px;
+  padding-top: .5%;
+}
+
+ul ul {
+  font-size: small;
+
+}

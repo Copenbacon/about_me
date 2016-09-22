@@ -1,60 +1,131 @@
 'use strict';
+var correctGuesses = 0;
 var username = prompt('Please enter your name');
 alert('Welcome, ' + username + '!');
 console.log('Your username is ' + username);
 var firstNameQ = prompt('Is \"Conor\" Conor\' s first name?');
-firstNameQ.toLowerCase();
-if (firstNameQ == 'yes' || firstNameQ == 'y' ) {
-  alert('Sorry, but Conor\'s first name is Spencer');
+firstNameQ = firstNameQ.toLowerCase();
+if (firstNameQ === 'yes' || firstNameQ === 'y' ) {
+  alert('Incorrect! Sorry, but Conor\'s first name is Spencer');
 } else {
-  alert('Correct!')
+  alert('Correct!');
+  correctGuesses++;
 }
 console.log('Conor\'s first name is Spencer, you answered: ' + firstNameQ);
 var bourbonQ = prompt('Is Conor a Bourbon guy?');
-bourbonQ.toLowerCase();
-if (bourbonQ == 'yes' || bourbonQ == 'y') {
+bourbonQ = bourbonQ.toLowerCase();
+if (bourbonQ === 'yes' || bourbonQ === 'y') {
   alert('Correct! Conor loves Bourbon. Eagle Rare 10 is his favorite.');
+  correctGuesses++;
 } else {
-  alert('Conor is a Bourbon guy. Eagle Rare 10 is his favorite.')
+  alert('Incorrect! Conor is a Bourbon guy. Eagle Rare 10 is his favorite.');
 }
 console.log('Conor is a Bourbon guy. He has had Van Winkle Family Reserve, but prefers Eagle Rare 10yr. You guessed: ' + bourbonQ);
 var conorCity = prompt('Does Conor live in Seattle?');
-conorCity.toLowerCase();
-if (conorCity == 'yes' || conorCity == 'y') {
-  alert('Sorry, but Conor lives down Tacoma');
+conorCity = conorCity.toLowerCase();
+if (conorCity === 'yes' || conorCity === 'y') {
+  alert('Incorrect! Sorry, but Conor lives down Tacoma');
 } else {
-  alert('Correct! Conor lives down in Tacoma')
+  alert('Correct! Conor lives down in Tacoma');
+  correctGuesses++;
 }
 console.log('Conor does not live in Seattle. He lives in Tacoma. You guessed: ' + conorCity);
 var drivingAbility = prompt('Does Conor know how to drive?');
-drivingAbility.toLowerCase();
-if (drivingAbility == 'yes' || drivingAbility == 'y') {
+drivingAbility = drivingAbility.toLowerCase();
+if (drivingAbility === 'yes' || drivingAbility === 'y') {
   alert('Yes! Conor does know how to drive! Do not listen to his family or girlfriend.');
+  correctGuesses++;
 } else {
-  alert('Conor has a license, so technically he DOES know how to drive.')
+  alert('Incorrect! Conor has a license, so technically he DOES know how to drive.');
 }
 console.log('Conor DOES know how to drive, despite what his family and girlfriend may have told you. You guessed: ' + drivingAbility);
 var hunting = prompt('Does Conor like to hunt?');
-hunting.toLowerCase();
-if (hunting == 'yes' ||hunting == 'y') {
+hunting = hunting.toLowerCase();
+if (hunting === 'yes' || hunting === 'y') {
   alert('Conor does love to hunt, his favorite game animals are birds!');
+  correctGuesses++;
 } else {
-  alert('Conor does love to hunt, gamebirds are good eatin\'')
+  alert('Incorrect!. Conor does love to hunt, gamebirds are good eatin\'');
 }
 console.log('Conor does like to hunt. Birds are his favorite game animal. You guessed: ' + hunting);
 
-/*
-var answersy = [bourbonQ, drivingAbility, hunting];
+// var answersy = [bourbonQ, drivingAbility, hunting];
+// var answersn = [firstNameQ, conorCity];
+// // var answers = [answersy, answersn];
+//
+// var i = 0;
+// var x = 0;
+// // var a = 0;
+//
+// while (i < 3 ) {
+//   if (answersy[i] === 'yes' || answersy[i] === 'y'){
+//     alert('Correct!');
+//   } else if (answersy[i] === 'no' || answersy[i] === 'n') {
+//     alert('Incorrect');}
+//   else {
+//     alert('That is not a valid answer');
+//   }
+//   i++;
+// }
+//
+// while (x < 2 ) {
+//   if (answersn[x] === 'no' || answersn[x] === 'n'){
+//     alert('Correct!');
+//   } else if (answersn[x] === 'yes' || answersn[x] === 'y') {
+//     alert('Incorrect');}
+//   else {
+//     alert('That is not a valid answer');
+//   }
+//   x++;
+// }
 
-var i = 0;
-for (i < 3, answersy[i], i++){
-  if (answers[i] == 'yes' || answers[i] == 'y'){
-     alert('Correct!');
+//Guess a number question
+
+var randomNum = 8;
+
+for (var guessNum = 1; guessNum < 5; guessNum++){
+  var numberOfGuessesRemaining = 5;
+  numberOfGuessesRemaining = numberOfGuessesRemaining - guessNum;
+  var numAnswer = prompt('Guess a number bewtween 1 and 10. You have ' + numberOfGuessesRemaining + ' chances remaining');
+  numAnswer = parseInt(numAnswer);
+  if(numAnswer === randomNum){
+    alert('Correct!');
+    correctGuesses++;
+    break;
+  } else {
+    alert('Incorrect!');
+    if(guessNum >= 4){
+      alert('you\'ve exceeded');
+    }
   }
-  elseif (answersy[i] == 'no' || answersy[i] == 'n'){
-    alert('Incorrect');}
 }
-  else{
-    alert('That is not a valid answer');
+
+//Array question
+var animalsConorOwned = ['ducks', 'dogs', 'geese', 'cats'];
+var numberOfGuesses = 0;
+var guessing = true;
+
+while(guessing === true && numberOfGuesses < 6){
+  console.log('while');
+  var guessAboutAnimalsOwned = prompt('Can you guess a type of animal Conor has owned?');
+  for(var x = 0; x < 4; x++){
+    if (guessAboutAnimalsOwned === animalsConorOwned[x]){
+      alert('Correct! Conor has owned ' + animalsConorOwned[x] + '. He has owned ducks, dogs, geese, and cats.');
+      guessing = false;
+      correctGuesses++;
+      break;
+    }
+    console.log('for loop');
   }
-*/
+  alert('Incorrect');
+  numberOfGuesses++;
+  if (numberOfGuesses >= 6){
+    alert('You didn\'t guess correctly, Conor has owned ducks, dogs, geese, and cats.');
+  }
+}
+
+if (correctGuesses === 7){
+  alert('Congratulations, ' + username + ' you got them all right! Are you sure you\'re not Conor?');
+} else {
+  alert('You got ' + correctGuesses + ' out of 7, ' + username + ', better luck next time!');
+}
