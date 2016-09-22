@@ -3,15 +3,17 @@ var correctGuesses = 0;
 var username = prompt('Please enter your name');
 alert('Welcome, ' + username + '!');
 console.log('Your username is ' + username);
+
 var firstNameQ = prompt('Is \"Conor\" Conor\' s first name?');
 firstNameQ = firstNameQ.toLowerCase();
-if (firstNameQ === 'yes' || firstNameQ === 'y' ) {
-  alert('Incorrect! Sorry, but Conor\'s first name is Spencer');
+if (firstNameQ === 'no' || firstNameQ === 'n' ) {
+  alert('Correct! Conor\'s first name is Spencer');
 } else {
-  alert('Correct!');
+  alert('Incorrect! Sorry, but Conor\'s first name is Spencer');
   correctGuesses++;
 }
 console.log('Conor\'s first name is Spencer, you answered: ' + firstNameQ);
+
 var bourbonQ = prompt('Is Conor a Bourbon guy?');
 bourbonQ = bourbonQ.toLowerCase();
 if (bourbonQ === 'yes' || bourbonQ === 'y') {
@@ -21,15 +23,17 @@ if (bourbonQ === 'yes' || bourbonQ === 'y') {
   alert('Incorrect! Conor is a Bourbon guy. Eagle Rare 10 is his favorite.');
 }
 console.log('Conor is a Bourbon guy. He has had Van Winkle Family Reserve, but prefers Eagle Rare 10yr. You guessed: ' + bourbonQ);
+
 var conorCity = prompt('Does Conor live in Seattle?');
 conorCity = conorCity.toLowerCase();
-if (conorCity === 'yes' || conorCity === 'y') {
-  alert('Incorrect! Sorry, but Conor lives down Tacoma');
-} else {
+if (conorCity === 'no' || conorCity === 'n') {
   alert('Correct! Conor lives down in Tacoma');
+} else {
+  alert('Incorrect! Sorry, but Conor lives down Tacoma');
   correctGuesses++;
 }
 console.log('Conor does not live in Seattle. He lives in Tacoma. You guessed: ' + conorCity);
+
 var drivingAbility = prompt('Does Conor know how to drive?');
 drivingAbility = drivingAbility.toLowerCase();
 if (drivingAbility === 'yes' || drivingAbility === 'y') {
@@ -39,6 +43,7 @@ if (drivingAbility === 'yes' || drivingAbility === 'y') {
   alert('Incorrect! Conor has a license, so technically he DOES know how to drive.');
 }
 console.log('Conor DOES know how to drive, despite what his family and girlfriend may have told you. You guessed: ' + drivingAbility);
+
 var hunting = prompt('Does Conor like to hunt?');
 hunting = hunting.toLowerCase();
 if (hunting === 'yes' || hunting === 'y') {
@@ -49,6 +54,7 @@ if (hunting === 'yes' || hunting === 'y') {
 }
 console.log('Conor does like to hunt. Birds are his favorite game animal. You guessed: ' + hunting);
 
+// console.log('Correct Guesses = ' + correctGuesses);
 // var answersy = [bourbonQ, drivingAbility, hunting];
 // var answersn = [firstNameQ, conorCity];
 // // var answers = [answersy, answersn];
@@ -81,10 +87,15 @@ console.log('Conor does like to hunt. Birds are his favorite game animal. You gu
 
 //Guess a number question
 
-var randomNum = 8;
+var randomNum = Math.random().toString();
+var res = randomNum.charAt(2);
+randomNum = res;
+randomNum = parseInt(randomNum);
+console.log(randomNum);
 
 for (var guessNum = 1; guessNum < 5; guessNum++){
   var numberOfGuessesRemaining = 5;
+  console.log('For loop');
   numberOfGuessesRemaining = numberOfGuessesRemaining - guessNum;
   var numAnswer = prompt('Guess a number bewtween 1 and 10. You have ' + numberOfGuessesRemaining + ' chances remaining');
   numAnswer = parseInt(numAnswer);
@@ -113,14 +124,18 @@ while(guessing === true && numberOfGuesses < 6){
       alert('Correct! Conor has owned ' + animalsConorOwned[x] + '. He has owned ducks, dogs, geese, and cats.');
       guessing = false;
       correctGuesses++;
+      numberOfGuesses++;
       break;
     }
     console.log('for loop');
   }
-  alert('Incorrect');
+  if(guessing === true){
+    alert('Incorrect, guess again!');
+  }
   numberOfGuesses++;
   if (numberOfGuesses >= 6){
     alert('You didn\'t guess correctly, Conor has owned ducks, dogs, geese, and cats.');
+    console.log('Number of Guesses > 6');
   }
 }
 
@@ -129,3 +144,19 @@ if (correctGuesses === 7){
 } else {
   alert('You got ' + correctGuesses + ' out of 7, ' + username + ', better luck next time!');
 }
+
+
+// document.write('<p>Is \"Conor\" Conor\'s first name?</p>');
+// document.write('<p>You answered: ' + '</p>');
+// document.write();
+// document.write();
+// document.write();
+// document.write();
+// document.write();
+// document.write();
+// document.write();
+// document.write();
+// document.write();
+// document.write();
+// document.write();
+// document.write();
