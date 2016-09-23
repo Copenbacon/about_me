@@ -146,7 +146,6 @@ function guessingGame(){
           alert('Correct! Conor has owned ' + animalsConorOwned[x] + '. He has owned ' + animalsConorOwned.toString() + '.');
           guessing = false;
           correctGuesses++;
-          numberOfGuesses++;
           break;
         }
         console.log('for loop');
@@ -169,4 +168,4 @@ function guessingGame(){
     alert('You got ' + correctGuesses + ' out of 7, ' + username + ', better luck next time!');
   }
 }
-guessingGame();
+// guessingGame();

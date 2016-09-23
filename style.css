@@ -36,14 +36,41 @@ p {
   margin: 1.15% 15% 2% 15%;
 }
 
-article {
+button {
+  /*text-align: center;*/
+  margin: 0 auto;
+  display: block;
+}
+
+#professional {
+  width: 32%;
   text-align: left;
-  margin-left: 10%;
+  margin-left: 16%;
+  margin-bottom: 5%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+#music {
+  width: 32%;
+  text-align: left;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+h2 {
+  text-align: center;
+}
+
+ol {
+  margin-left: 30%;
   margin-right: 30%;
 }
 
 li {
-  margin: 2px;
+  margin: 0 auto;
   padding-top: .5%;
 }
 
