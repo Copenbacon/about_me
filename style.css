@@ -1,3 +1,54 @@
+@media screen and (max-width:1053px){
+  html body header figure button ul ol li {
+    float: none;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  section {
+    width: 50%;
+    /*margin: auto;*/
+    /*padding: 0;*/
+  }
+
+  article {
+    float: none;
+    /*margin: auto;*/
+    /*position: relative;*/
+    display: block;
+    background-color: rgba(0, 0, 0, .4);
+    border: 2px solid black;
+    border-radius: 6px;
+
+  }
+
+  #music {
+    width: 100%;
+    float: inherit;
+    height: 20%;
+    margin: 1%;
+  }
+
+  #professional {
+    width: 100%;
+    height: 20%;
+    float: inherit;
+    margin: 1%;
+  }
+
+  figure.ccPic {
+    text-align:center;
+    width: 453px;
+    margin: auto;
+    padding-top: 150px;
+  }
+
+  figcaption {
+    text-align: center;
+    font-size: small;
+  }
+}
+
 * {
   font-family:Helvetica, sans-serif;
 }
@@ -6,6 +57,10 @@ html body {
   background-color: #efefef;
   margin: auto;
   padding: inherit;
+}
+
+body {
+  max-width: 100em;
 }
 
 header {
@@ -19,11 +74,15 @@ header {
   position: fixed;
 }
 
+#headerLink {
+  color: white;
+}
+
 figure.ccPic {
   text-align:center;
+  /*margin: auto;*/
   width: 453px;
-  margin: auto;
-  padding-top: 10%;
+  padding-top: 150px;
 }
 
 figcaption {
@@ -37,44 +96,54 @@ p {
 }
 
 button {
-  /*text-align: center;*/
-  margin: 0 auto;
+  text-align: center;
+  margin: auto;
   display: block;
+  margin-bottom: 1%;
 }
 
-#professional {
-  width: 32%;
-  text-align: left;
-  margin-left: 16%;
-  margin-bottom: 5%;
-  display: inline-block;
-  background-color: rgba(0, 0, 0, .4);
+section {
+  /*width: 67%;*/
+  margin: auto;
+  font-size: 1em;
+  max-width: 1053px;
 }
 
-#music {
-  width: 32%;
+article {
+  width: 30em;
+  height: 20em;
   text-align: left;
-  margin-left: 5%;
-  margin-bottom: 5%;
+  margin: 2%;
   display: inline-block;
   background-color: rgba(0, 0, 0, .4);
+  border: 2px solid black;
+  border-radius: 6px;
+  float: left;
 }
+
 
 h2 {
   text-align: center;
+  font-size: 1.5em;
+}
+
+ul {
+  margin: 1.5%;
+  margin-right: 6%;
 }
 
 ol {
-  margin-left: 30%;
-  margin-right: 30%;
+  width: 35%;
+  margin: auto;
 }
 
 li {
   margin: 0 auto;
   padding-top: .5%;
+  font-size: 1em;
 }
 
 ul ul {
-  font-size: small;
+  font-size: .8em;
 
 }
