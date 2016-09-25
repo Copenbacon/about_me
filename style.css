@@ -49,8 +49,8 @@
 
   #music {
     width: 100%;
-    float: inherit;
     height: 20%;
+    float: inherit;
     margin: 1%;
   }
 
@@ -67,7 +67,7 @@
 }
 
 html body {
-  background-color: #efefef;
+  background-color: rgba(84, 44, 26, 0.2);
   margin: auto;
   padding: inherit;
 }
@@ -75,11 +75,12 @@ html body {
 header {
   width: 100%;
   text-align: center;
-  background-color: black;
+  background-color: rgba(0, 1, 51, 0.79);
   padding-top: 1.5%;
   padding-bottom: 1.5%;
   color: white;
   position: fixed;
+  z-index: 1;
 }
 
 #headerLink {
@@ -105,7 +106,7 @@ figcaption {
 
 p {
   text-align: center;
-  margin: 1.15% 15% 2% 15%;
+  /*margin: 1.15% 15% 2% 15%;*/
 }
 
 button {
@@ -123,7 +124,7 @@ button:hover{
 }
 
 section {
-  /*width: 67%;*/
+
   margin: auto;
   font-size: 1em;
   max-width: 1053px;
@@ -145,6 +146,7 @@ article {
 h2 {
   text-align: center;
   font-size: 1.5em;
+  text-decoration: underline;
 }
 
 ul {
@@ -166,4 +168,16 @@ li {
 ul ul {
   font-size: .8em;
 
+}
+
+#musicList {
+  font-size: 1.23em;
+  text-align: center;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.75)
+  /*width: 68%;*/
+}
+
+#musicList p {
+  margin-top: 1em;
 }
