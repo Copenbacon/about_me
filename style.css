@@ -5,6 +5,31 @@
     margin: 0 auto;
   }
 
+  figure.ccPic {
+    text-align:center;
+    margin: auto;
+    margin-top: 40%;
+    min-width: 100%;
+    padding-top: 2%;
+    display: inline-block;
+  }
+
+  figure.ccPic2 {
+    text-align:center;
+    margin: auto;
+    min-width: 100%;
+    padding-top: 2%;
+    display: inline-block;
+  }
+
+  figure.ccPic3 {
+    text-align:center;
+    margin: auto;
+    min-width: 100%;
+    padding-top: 2%;
+    display: inline-block;
+  }
+
   section {
     width: 50%;
     /*margin: auto;*/
@@ -35,18 +60,6 @@
     float: inherit;
     margin: 1%;
   }
-
-  figure.ccPic {
-    text-align:center;
-    width: 453px;
-    margin: auto;
-    padding-top: 150px;
-  }
-
-  figcaption {
-    text-align: center;
-    font-size: small;
-  }
 }
 
 * {
@@ -59,17 +72,12 @@ html body {
   padding: inherit;
 }
 
-body {
-  max-width: 100em;
-}
-
 header {
   width: 100%;
   text-align: center;
   background-color: black;
-  margin:0px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
   color: white;
   position: fixed;
 }
@@ -78,11 +86,16 @@ header {
   color: white;
 }
 
-figure.ccPic {
+figure {
   text-align:center;
-  /*margin: auto;*/
-  width: 453px;
+  margin: auto;
+  max-width: 33%;
   padding-top: 150px;
+  display: inline-block;
+}
+
+img:hover {
+  opacity: .8;
 }
 
 figcaption {
@@ -100,6 +113,13 @@ button {
   margin: auto;
   display: block;
   margin-bottom: 1%;
+  border: 1px solid rgba(64, 65, 182, 0.69);
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: rgb(91, 92, 93);
+  border: 2px solid rgba(0, 2, 237, 0.8)
 }
 
 section {
